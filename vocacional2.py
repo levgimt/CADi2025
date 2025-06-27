@@ -1,4 +1,4 @@
-socialsocialimport streamlit as st
+import streamlit as st
 
 # --- Preguntas y opciones ---
 preguntas = [
