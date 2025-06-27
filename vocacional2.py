@@ -1,13 +1,13 @@
-import streamlit as st
+socialsocialimport streamlit as st
 
 # --- Preguntas y opciones ---
 preguntas = [
     ("¿Qué área de la automatización te gusta?", ["Quiero varo", "Me gustan los PLC's", "Ciberseguridad", "Cosas que exploten"]),
-    ("¿Qué asignatura prefieres?", ["Matemáticas", "Arte", "Tecnología", "Psicología"]),
-    ("¿Cómo te gusta trabajar?", ["Analizando datos", "Creando cosas nuevas", "Con herramientas", "En equipo con personas"]),
-    ("¿Qué hobby te interesa más?", ["Resolver acertijos", "Tocar un instrumento", "Armar circuitos", "Voluntariado"]),
-    ("¿Qué valoras más en un trabajo?", ["Descubrimiento", "Expresión", "Precisión", "Impacto Ciberseguridad"]),
-    ("¿Con qué palabra te identificas más?", ["Lógico", "Creativo", "Práctico", "Empático"])
+    ("¿Qué asignatura prefieres?", ["Lógica", "Cinemática", "Tecnología", "Hackeo"]),
+    ("¿Cómo te gusta trabajar?", ["Analizando datos", "Mover cosas", "Con herramientas", "Estar en el sotano"]),
+    ("¿Qué hobby te interesa más?", ["Resolver acertijos", "Automatizar", "Armar circuitos", "Molestar a personas"]),
+    ("¿Qué valoras más en un trabajo?", ["Diagramas", "Líneas de Producción", "Precisión", "Impacto Ciberseguridad"]),
+    ("¿Con qué palabra te identificas más?", ["Matemáticas", "Gemelos Digitales", "Práctico", "Cobrar por Todo"])
 ]
 
 # --- Mapeo a perfiles ---
