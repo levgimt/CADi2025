@@ -6,44 +6,44 @@ preguntas = [
     ("¿Qué asignatura prefieres?", ["Matemáticas", "Arte", "Tecnología", "Psicología"]),
     ("¿Cómo te gusta trabajar?", ["Analizando datos", "Creando cosas nuevas", "Con herramientas", "En equipo con personas"]),
     ("¿Qué hobby te interesa más?", ["Resolver acertijos", "Tocar un instrumento", "Armar circuitos", "Voluntariado"]),
-    ("¿Qué valoras más en un trabajo?", ["Descubrimiento", "Expresión", "Precisión", "Impacto social"]),
+    ("¿Qué valoras más en un trabajo?", ["Descubrimiento", "Expresión", "Precisión", "Impacto Ciberseguridad"]),
     ("¿Con qué palabra te identificas más?", ["Lógico", "Creativo", "Práctico", "Empático"])
 ]
 
 # --- Mapeo a perfiles ---
 perfil_map = {
-    "Leer artículos científicos": "científico",
-    "Matemáticas": "científico",
-    "Analizando datos": "científico",
-    "Resolver acertijos": "científico",
-    "Descubrimiento": "científico",
-    "Lógico": "científico",
-    "Pintar o dibujar": "artístico",
-    "Arte": "artístico",
-    "Creando cosas nuevas": "artístico",
-    "Tocar un instrumento": "artístico",
-    "Expresión": "artístico",
-    "Creativo": "artístico",
+    "Diagramas": "PLCero",
+    "Matemáticas": "PLCero",
+    "Analizando datos": "PLCero",
+    "Lógica": "PLCero",
+    "Resolver Acertijos": "PLCero",
+    "Lógico": "PLCero",
+    "Cinemática": "Robótico",
+    "Mover cosas": "Robótico",
+    "Animaciones": "Robótico",
+    "Gemelos Digitales": "Robótico",
+    "Automatizar": "Robótico",
+    "Lineas de Producción": "Robótico",
     "Reparar cosas": "técnico",
     "Tecnología": "técnico",
     "Con herramientas": "técnico",
     "Armar circuitos": "técnico",
     "Precisión": "técnico",
     "Práctico": "técnico",
-    "Ayudar a personas": "social",
-    "Psicología": "social",
-    "En equipo con personas": "social",
-    "Voluntariado": "social",
-    "Impacto social": "social",
-    "Empático": "social"
+    "Molestar a personas": "Ciberseguridad",
+    "Computadoras": "Ciberseguridad",
+    "Hackeo": "Ciberseguridad",
+    "Cobrar por todo": "Ciberseguridad",
+    "Impacto en TI": "Ciberseguridad",
+    "Estar en el sotano": "Ciberseguridad"
 }
 
 # --- Recomendaciones ---
 recomendaciones = {
-    "científico": "🔬 Perfil Científico: Podrías destacar en áreas como Física, Matemáticas, Biología, Ingeniería o Investigación.",
-    "artístico": "🎨 Perfil Artístico: Podrías sobresalir en Diseño, Música, Artes Visuales, Publicidad o Cine.",
-    "técnico": "🔧 Perfil Técnico: Carreras como Mecatrónica, Robótica, Sistemas o Mantenimiento son una excelente opción.",
-    "social": "👥 Perfil Social: Psicología, Educación, Trabajo Social o Comunicación podrían ser tu vocación."
+    "PLCero": "🔬 Perfil PLCero: Podrías destacar en áreas como Educación, Eléctrica, Descompostura.",
+    "Robótico": "🎨 Perfil Robótico: Podrías sobresalir en Cinemática, Mecánica, Control, Visión.",
+    "Técnico": "🔧 Perfil Técnico: Mantenimiento, Instalador, Seguridad Industrial.",
+    "Ciberseguridad": "👥 Perfil Ciberseguridad: Redes, IT, Bases de Datos."
 }
 
 # --- Estado inicial seguro ---
@@ -71,7 +71,7 @@ with st.sidebar:
 
 # --- Título y progreso ---
 st.title("🧭 Test De Automatización Interactivo")
-st.markdown("Considera que este cuestionario es solo de ayuda. No olvides consultar a los experos profesionales")
+st.markdown("Considera que este cuestionario es solo de ayuda. No olvides consultar a Guillermo Sandoval")
 
 # Barra de progreso mejorada
 progreso = len(st.session_state.respuestas)
@@ -114,7 +114,7 @@ if not st.session_state.finalizado:
 # --- Mostrar resultado ---
 if st.session_state.finalizado:
     # Cálculo del perfil
-    conteo = {"científico": 0, "artístico": 0, "técnico": 0, "social": 0}
+    conteo = {"PLCero": 0, "Robótico": 0, "técnico": 0, "Ciberseguridad": 0}
     for r in st.session_state.respuestas:
         perfil = perfil_map.get(r)
         if perfil:
